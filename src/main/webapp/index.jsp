@@ -1,12 +1,9 @@
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KUSI MANIA | Entertainment World</title>
-
+    <title>JustMiniStories - Magical Stories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -18,112 +15,94 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #141e30, #243b55);
-            color: white;
-            min-height: 100vh;
+            background: linear-gradient(135deg, #fff1eb, #ace0f9);
+            color: #333;
+            text-align: center;
         }
 
         header {
-            padding: 25px 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0,0,0,0.25);
+            background: #ff4757;
+            color: white;
+            padding: 25px;
         }
 
-        header h2 {
-            color: #ffcc00;
-            font-size: 28px;
-            letter-spacing: 2px;
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #222;
+            padding: 15px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
+            margin: 15px;
             font-weight: bold;
         }
 
         .hero {
-            text-align: center;
-            padding: 100px 20px 70px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            color: #ffcc00;
-            margin-bottom: 20px;
+            padding: 60px 20px;
         }
 
         .hero h2 {
-            font-size: 28px;
+            font-size: 36px;
+            color: #e84118;
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 18px;
-            color: #dddddd;
-            line-height: 1.8;
+            margin-bottom: 25px;
         }
 
-        .btn {
+        .subscribe {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 35px;
-            background: #ff1744;
+            background: #ff0000;
             color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 30px;
+            font-size: 18px;
             font-weight: bold;
         }
 
-        .content {
+        .subscribe:hover {
+            background: #cc0000;
+        }
+
+        .stories {
+            padding: 40px 20px;
+        }
+
+        .story-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 25px;
-            padding: 30px 20px 70px;
+            margin-top: 25px;
         }
 
-        .card {
-            background: rgba(255,255,255,0.1);
-            width: 250px;
-            padding: 30px 20px;
-            text-align: center;
+        .story {
+            background: white;
+            width: 260px;
+            padding: 25px;
             border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 4px 12px #0002;
         }
 
-        .card h3 {
-            color: #ffcc00;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #eeeeee;
-            line-height: 1.6;
+        .story h3 {
+            color: #ff4757;
+            margin-bottom: 12px;
         }
 
         footer {
-            text-align: center;
-            padding: 25px;
-            background: rgba(0,0,0,0.3);
-            color: #cccccc;
-        }
-
-        @media(max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            nav a {
-                margin: 0 7px;
-            }
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -131,65 +110,65 @@
 <body>
 
 <header>
-    <h2>KUSI MANIA</h2>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#content">Videos</a>
-        <a href="#about">About</a>
-    </nav>
+    <h1>🎬 JustMiniStories</h1>
+    <p>Little Stories, Big Smiles! ❤️</p>
 </header>
 
+<nav>
+    <a href="#home">Home</a>
+    <a href="#stories">Our Stories</a>
+    <a href="#about">About Us</a>
+</nav>
+
 <section class="hero" id="home">
-
-    <h1>WELCOME TO KUSI MANIA!</h1>
-
-    <h2>Entertainment Unlimited!</h2>
+    <h2>Welcome to JustMiniStories!</h2>
 
     <p>
-        Dance | Comedy | AI Videos | Fun | Entertainment
-        <br>
-        Get ready for unlimited entertainment and endless smiles!
-        <br>
-        Watch, Enjoy and Keep Smiling!
+        Discover magical stories, cute characters,
+        funny moments and entertaining videos.
     </p>
 
-    <a class="btn"
-       href="https://www.youtube.com/@kusimania"
+    <a class="subscribe"
+       href="https://www.youtube.com/results?search_query=JustMiniStories"
        target="_blank">
-       SUBSCRIBE NOW
+       ▶ Subscribe Now
     </a>
-
 </section>
 
-<section class="content" id="content">
+<section class="stories" id="stories">
+    <h2>✨ Explore Our Stories ✨</h2>
 
-    <div class="card">
-        <h3>AI Dance Videos</h3>
-        <p>Enjoy amazing AI dance performances and entertaining moments.</p>
+    <div class="story-container">
+
+        <div class="story">
+            <h3>🐻 Kids Stories</h3>
+            <p>Enjoy magical adventures and wonderful stories.</p>
+        </div>
+
+        <div class="story">
+            <h3>😂 Funny Moments</h3>
+            <p>Laugh out loud with our cute and funny characters.</p>
+        </div>
+
+        <div class="story">
+            <h3>🌈 Moral Stories</h3>
+            <p>Learn valuable lessons through entertaining stories.</p>
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>Funny Videos</h3>
-        <p>Laugh out loud with our fun-filled comedy videos.</p>
-    </div>
-
-    <div class="card">
-        <h3>Entertainment</h3>
-        <p>Discover exciting videos, creative content and surprises.</p>
-    </div>
-
-    <div class="card">
-        <h3>Interesting Facts</h3>
-        <p>Explore interesting information in a fun and simple way.</p>
-    </div>
-
 </section>
 
-<footer id="about">
-    <h3>KUSI MANIA</h3>
-    <p>Thank you for visiting! Keep Supporting Us ❤️</p>
-    <p>&copy; 2026 KUSI MANIA. All Rights Reserved.</p>
+<section class="hero" id="about">
+    <h2>About JustMiniStories</h2>
+    <p>
+        Our mission is to entertain everyone with
+        creative stories, imagination and happiness.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 JustMiniStories | All Rights Reserved</p>
+    <p>Thank you for visiting our channel! ❤️</p>
 </footer>
 
 </body>
