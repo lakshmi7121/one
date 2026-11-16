@@ -1,9 +1,12 @@
 
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JustMiniStories - Magical Stories</title>
+    <title>Kunni - DevOps CI/CD Project</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -15,161 +18,98 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #fff1eb, #ace0f9);
-            color: #333;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
 
-        header {
-            background: #ff4757;
-            color: white;
-            padding: 25px;
+        .container {
+            background: rgba(255, 255, 255, 0.10);
+            padding: 50px 35px;
+            border-radius: 20px;
+            max-width: 700px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
-        header h1 {
-            font-size: 35px;
-            margin-bottom: 10px;
+        h1 {
+            font-size: 42px;
+            color: #00e5ff;
+            margin-bottom: 15px;
         }
 
-        nav {
-            background: #222;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-        .hero {
-            padding: 60px 20px;
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            color: #e84118;
+        h2 {
+            font-size: 24px;
             margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #e0e0e0;
         }
 
-        .subscribe {
+        .status {
             display: inline-block;
-            background: #ff0000;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 18px;
+            background: #00c853;
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 25px 0;
             font-weight: bold;
         }
 
-        .subscribe:hover {
-            background: #cc0000;
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #bdbdbd;
         }
 
-        .stories {
-            padding: 40px 20px;
-        }
-
-        .story-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .story {
-            background: white;
-            width: 260px;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px #0002;
-        }
-
-        .story h3 {
-            color: #ff4757;
-            margin-bottom: 12px;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
+        .tech {
+            margin-top: 20px;
+            color: #00e5ff;
+            font-weight: bold;
+            line-height: 2;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🎬 JustMiniStories</h1>
-    <p>Little Stories, Big Smiles! ❤️</p>
-</header>
+    <div class="container">
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#stories">Our Stories</a>
-    <a href="#about">About Us</a>
-</nav>
+        <h1>🚀 Welcome to KUNNI!</h1>
 
-<section class="hero" id="home">
-    <h2>Welcome to JustMiniStories!</h2>
+        <h2>My DevOps CI/CD Project</h2>
 
-    <p>
-        Discover magical stories, cute characters,
-        funny moments and entertaining videos.
-    </p>
-
-    <a class="subscribe"
-       href="https://www.youtube.com/results?search_query=JustMiniStories"
-       target="_blank">
-       ▶ Subscribe Now
-    </a>
-</section>
-
-<section class="stories" id="stories">
-    <h2>✨ Explore Our Stories ✨</h2>
-
-    <div class="story-container">
-
-        <div class="story">
-            <h3>🐻 Kids Stories</h3>
-            <p>Enjoy magical adventures and wonderful stories.</p>
+        <div class="status">
+            SUCCESSFULLY DEPLOYED
         </div>
 
-        <div class="story">
-            <h3>😂 Funny Moments</h3>
-            <p>Laugh out loud with our cute and funny characters.</p>
+        <p>
+            Congratulations! Your application is running successfully
+            on Apache Tomcat.
+        </p>
+
+        <p>
+            This application is built using Maven,
+            integrated with Jenkins and stored in Nexus.
+        </p>
+
+        <div class="tech">
+            GitHub | Jenkins | Maven | Nexus | Apache Tomcat
         </div>
 
-        <div class="story">
-            <h3>🌈 Moral Stories</h3>
-            <p>Learn valuable lessons through entertaining stories.</p>
+        <div class="footer">
+            <p>Automated Build & Deployment Pipeline</p>
+            <p>Created with ❤️ by Lakshmi</p>
+            <p>Server Time: <%= new java.util.Date() %></p>
         </div>
 
     </div>
-</section>
-
-<section class="hero" id="about">
-    <h2>About JustMiniStories</h2>
-    <p>
-        Our mission is to entertain everyone with
-        creative stories, imagination and happiness.
-    </p>
-</section>
-
-<footer>
-    <p>© 2026 JustMiniStories | All Rights Reserved</p>
-    <p>Thank you for visiting our channel! ❤️</p>
-</footer>
 
 </body>
 </html>
