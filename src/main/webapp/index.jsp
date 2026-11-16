@@ -5,8 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kunni - DevOps CI/CD Project</title>
-
+    <title>ShopEase - Online Shopping</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -14,102 +13,288 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #141e30, #243b55);
+            background: #f5f6fa;
+            color: #222;
+        }
+
+        header {
+            background: #172337;
             color: white;
-            min-height: 100vh;
+            padding: 18px 6%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #ffca28;
+        }
+
+        .search {
+            padding: 12px;
+            width: 40%;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .cart {
+            background: #ffca28;
+            color: #172337;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: white;
+            padding: 18px;
             text-align: center;
+            box-shadow: 0 2px 8px #ddd;
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.10);
-            padding: 50px 35px;
-            border-radius: 20px;
-            max-width: 700px;
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        .banner {
+            margin: 25px auto;
             width: 90%;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            padding: 65px 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(120deg, #6a11cb, #2575fc);
         }
 
-        h1 {
+        .banner h1 {
             font-size: 42px;
-            color: #00e5ff;
             margin-bottom: 15px;
         }
 
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        .banner p {
+            font-size: 19px;
+            margin-bottom: 25px;
         }
 
-        p {
-            font-size: 17px;
-            line-height: 1.8;
-            color: #e0e0e0;
-        }
-
-        .status {
+        .shop-btn {
+            background: #ffca28;
+            color: #172337;
+            padding: 14px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
             display: inline-block;
-            background: #00c853;
-            padding: 12px 25px;
-            border-radius: 30px;
-            margin: 25px 0;
-            font-weight: bold;
         }
 
-        .footer {
-            margin-top: 30px;
+        .section-title {
+            text-align: center;
+            margin: 35px 0 25px;
+            font-size: 29px;
+        }
+
+        .products {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-7px);
+        }
+
+        .product .emoji {
+            font-size: 75px;
+            padding: 20px;
+            background: #f5f6fa;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 18px 0 10px;
+        }
+
+        .price {
+            color: #e65100;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 12px;
+        }
+
+        .old-price {
+            color: #888;
+            text-decoration: line-through;
             font-size: 14px;
-            color: #bdbdbd;
         }
 
-        .tech {
-            margin-top: 20px;
-            color: #00e5ff;
+        .buy-btn {
+            background: #172337;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
             font-weight: bold;
-            line-height: 2;
+        }
+
+        .buy-btn:hover {
+            background: #2575fc;
+        }
+
+        .offer {
+            width: 90%;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff3e0;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: #172337;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media(max-width: 600px) {
+            .search {
+                width: 100%;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+<header>
+    <div class="logo">🛍️ ShopEase</div>
 
-        <h1>🚀 Welcome to KUNNI!</h1>
+    <input type="text" class="search"
+        placeholder="Search for products...">
 
-        <h2>My DevOps CI/CD Project</h2>
+    <div class="cart">🛒 My Cart</div>
+</header>
 
-        <div class="status">
-            SUCCESSFULLY DEPLOYED
-        </div>
+<nav>
+    <a href="#">Home</a>
+    <a href="#electronics">Electronics</a>
+    <a href="#fashion">Fashion</a>
+    <a href="#accessories">Accessories</a>
+    <a href="#offers">Offers</a>
+</nav>
 
-        <p>
-            Congratulations! Your application is running successfully
-            on Apache Tomcat.
-        </p>
+<section class="banner">
+    <h1>Big Shopping Festival!</h1>
+    <p>Discover amazing products at unbelievable prices.</p>
+    <a href="#products" class="shop-btn">Shop Now</a>
+</section>
 
-        <p>
-            This application is built using Maven,
-            integrated with Jenkins and stored in Nexus.
-        </p>
+<h2 class="section-title" id="products">
+    ✨ Featured Products
+</h2>
 
-        <div class="tech">
-            GitHub | Jenkins | Maven | Nexus | Apache Tomcat
-        </div>
+<section class="products">
 
-        <div class="footer">
-            <p>Automated Build & Deployment Pipeline</p>
-            <p>Created with ❤️ by Lakshmi</p>
-            <p>Server Time: <%= new java.util.Date() %></p>
-        </div>
-
+    <div class="product" id="electronics">
+        <div class="emoji">🎧</div>
+        <h3>Wireless Headphones</h3>
+        <p>Premium sound experience</p>
+        <div class="price">₹1,499</div>
+        <button class="buy-btn" onclick="addToCart('Wireless Headphones')">
+            Add to Cart
+        </button>
     </div>
+
+    <div class="product" id="fashion">
+        <div class="emoji">👟</div>
+        <h3>Stylish Sneakers</h3>
+        <p>Comfort meets fashion</p>
+        <div class="price">₹2,199</div>
+        <button class="buy-btn" onclick="addToCart('Stylish Sneakers')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="product" id="accessories">
+        <div class="emoji">⌚</div>
+        <h3>Smart Watch</h3>
+        <p>Smart living starts here</p>
+        <div class="price">₹2,999</div>
+        <button class="buy-btn" onclick="addToCart('Smart Watch')">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="product">
+        <div class="emoji">🎒</div>
+        <h3>Travel Backpack</h3>
+        <p>Perfect for every journey</p>
+        <div class="price">₹999</div>
+        <button class="buy-btn" onclick="addToCart('Travel Backpack')">
+            Add to Cart
+        </button>
+    </div>
+
+</section>
+
+<section class="offer" id="offers">
+    <h2>🔥 Special Shopping Offer!</h2>
+    <p>Get amazing deals on your favourite products.</p>
+    <h2>Up to 50% OFF</h2>
+</section>
+
+<footer>
+    <h2>🛍️ ShopEase</h2>
+    <p>Your Happiness, Our Priority!</p>
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+    <p>Powered by Jenkins | Maven | Nexus | Tomcat</p>
+    <p>Created by Lakshmi ❤️</p>
+</footer>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart(product) {
+        cartCount++;
+        document.querySelector(".cart").innerHTML =
+            "🛒 My Cart (" + cartCount + ")";
+
+        alert(product + " added to your cart!");
+    }
+</script>
 
 </body>
 </html>
